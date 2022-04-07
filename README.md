@@ -1,2 +1,3 @@
 # Proyecto_en_Grupo_de_html
- Carpeta Original para las cosas
+
+Este Archivo está hecho con mucho Cariño y prisa, por Favor ten paciencia
