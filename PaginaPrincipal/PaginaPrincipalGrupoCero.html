@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    body{
+        background-image:url('resources/fondo_pagina.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  </style>
     <!---------------------------------------------------------------------------------el head--------------------------------------------------------------------------------------------------->
     <head>
         <title>Grupo Cero/inicio</title>
@@ -16,7 +23,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">            <!--plantilla del Navbar de Bootstrap 5 -->
                <div class="container-fluid">
                    <a class="navbar-brand" href="#">
-                       <img src="cero.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                       <img src="resources/cero.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                   </a>
                <a class="navbar-brand" href="#">Zona Cero</a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +39,12 @@
                        Productos
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <li><a class="dropdown-item" href="#">Macetas</a></li>
-                       <li><a class="dropdown-item" href="#">Herramientas De Jardinería</a></li>
+                       <li><a class="dropdown-item" href="#">Oleo</a></li>
+                       <li><a class="dropdown-item" href="#">Hechas con Pastel</a></li>
                        <li><hr class="dropdown-divider"></li>
-                       <li><a class="dropdown-item" href="#">Tierra Para Plantar</a></li>
-                       <li><a class="dropdown-item" href="#">Semillas y Plantas</a></li>
-                       <li><a class="dropdown-item" href="#">Fertilizantes</a></li>
+                       <li><a class="dropdown-item" href="#">Dibujados</a></li>
+                       <li><a class="dropdown-item" href="#">Lienzos Personalizados</a></li>
+                       <li><a class="dropdown-item" href="#">Sensacional</a></li>
                        </ul>
                    </li>
                    <li class="nav-item">                                                                    <!--este es para las opciones desactivadas-->
@@ -50,16 +57,19 @@
                    </form>
 
                    <div class="btn-group">                                                                  <!--ahi el grupo de Botones del inicio de sesion -->
-                    <a href="#" class="btn btn-primary active" aria-current="page">Crear Cuenta</a>
-                    <a href="#" class="btn btn-primary">Iniciar Sesión</a>
+                    <a href="Proyecto_en_Grupo_de_html" class="btn btn-primary active" aria-current="page">Crear Cuenta</a>
+                    <a href="file:///C:/Users/Belz-Sama/Documents/GitHub/Proyecto_en_Grupo_de_html/Pagina%20de%20inicio%20sesion/Pagina%20inicio%20sesion.html#" class="btn btn-primary">Iniciar Sesión</a>
                   </div>
                </div>
                </div>
            </nav>
            <!-----------------------------------------------------------------------------------Carrusel de los productos mas destacados-------------------------------------------------->
-           <div class="shadow-lg p-3 mb-5 bg-body rounded">
+           <div class="text-center">
+            <h1 style="color: aliceblue;">Las Obras Mejor Evaluadas</h1>
+            <h4 style="color: aliceblue;">Por Nuestros Moderadores.</h3>
+          </div>
             <div class="col-lg-10 offset-1 col-md-6 mb-4 mb-1">                                                                            <!--este es el carrusel de la pagina principal de la tienda.-->
-              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
                   <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -70,43 +80,43 @@
                   <div class="carousel-inner">                                                                        <!--esta es las -->
           <!--los resultados de los usos de los productos-->
                     <div class="carousel-item active">
-                      <img src="pintura_pavo_real.jpg" class="d-block w-100" alt="Foto_1">
+                      <img src="Imagenes del Carrusel/cubismo.jpg" class="d-block w-100" alt="Foto_1">
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>El Jardín Mas hermoso</h5>
-                        <p>Que Nuestros Productos pueden Ofrecer</p>
+                        <h2>La Cleta</h2>
+                        <p>Por: alguien que la olvidó</p>
                       </div>
                     </div>
           <!--las flores-->
                     <div class="carousel-item">
-                      <img src="Plantas_copia.jpg" class="d-block w-100" alt="...">
+                      <img src="Imagenes del Carrusel/dibujo-a-lapiz.jpg" class="d-block w-100" alt="Foto_2">
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>La Mejor Seleccion de Flores y plantas</h5>
-                        <p>Que Van a Decorar de la forma mas Bella Sus Jardines.</p>
+                        <h2>Ojo Seductor</h2>
+                        <p>Por: el Juez</p>
                       </div>
                     </div>
           <!--las macetas-->
                     <div class="carousel-item">
-                      <img src="stock-photo-plants-pots-books-table-beige_copia.jpg" class="d-block w-100" alt="...">
+                      <img src="Imagenes del Carrusel/Sa(n)d.jpeg" class="d-block w-100" alt="Foto_3">
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>La Mejor Seleccion de Macetas y Maceteros</h5>
+                        <h1>Una foto de alguien Rechazado por el mundo</h1>
                         <p>Para tener sus plantas, arboles Bonzais y Flores.</p>
                       </div>
                     </div>
           <!--las Herramientas-->
                     <div class="carousel-item">
-                      <img src="Jardinería_fotico_copia.jpg" class="d-block w-100" alt="Herramientas">
+                      <img src="Imagenes del Carrusel/Col-2-ors.jpg" class="d-block w-100" alt="Foto_4">
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>Las Mejores Herramientas</h5>
-                        <p>Que pueden ayudarle con el cuidado de Su Jardín.</p>
+                        <h2>Col-2-Ors</h2>
+                        <p>Por:alguien Aburrido</p>
                       </div>
                     </div>
   
           <!--El Courier-->
                   <div class="carousel-item">
-                      <img src="cuorier-quote_copia.jpg" class="d-block w-100" alt="Courier">
+                      <img src="Imagenes del Carrusel/Ti8uron_by_g0ra.jpg" class="d-block w-100" alt="Courier">
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>El Mejor Courier Disponible</h5>
-                        <p>Con Envío Rápido Y Seguro a tu Hogar</p>
+                        <h1 >GAhrrRr</h1>
+                        <p>De alguien que le gusta Gura, creo</p>
                       </div>
                     </div>
                   </div>
@@ -121,24 +131,37 @@
                   </button>
               </div>
             </div>
-            </div>
+            
     <!-----------------------------------------------------------------------------------------------botones del asunto------------------------------------------------------------------------>
-          <div class="shadow-lg p-3 mb-5 bg-body rounded">
-            <div class="row m-5" style="background-color: #333333;">
-                <div class="col-lg-4 mb-4 ">                                    <!--estos son los productos que tienen que ver con el uso y manejo de la tierra y Plantas-->           
+                  
+                  <div class="text-center">
+                    <h1 style="color: aliceblue;">Y También</h1>
+                    <h4 style="color: aliceblue;">otras Obras de Arte No tan Destacadas</h3>
+                  </div>
+
+
+            <div class="row m-5">
+                <div class="col-lg-4 mb-4 "> 
+                  <div class="d-grid gap-2">                                  <!--estos son los productos que tienen que ver con el uso y manejo de la tierra y Plantas-->           
                     <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/Arbolito_recortado.jpg" width="100" alt="Arbolito_recortado" ><h2>El Arbol De los Rombos</h2></a>
                     <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/cafecito_recortado.jpg" width="100" alt="cafecito_recortado" ><h2>Cafecito Re-cortado</h2></a>
                 </div>
-                <div class="col-lg-4 mb-4">                               <!--estas son los productos que actuan en la tierra -->
+              </div> 
+                <div class="col-lg-4 mb-4"> 
+                  <div class="d-grid gap-2">                             <!--estas son los productos que actuan en la tierra -->
                     <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/Diseño del libro_recortado.jpg" width="100" alt="Librito Recortado"><h2>Librito Recortado</h2></a>
                     <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/Pintura de algo que no entiendo_recortado.jpg"width="100" alt="Abstractismo"><h2>Abstractismo</h2></a>
                 </div>
-                <div class="col-lg-4 mb-4">                                <!--elementos que ayudarán a las plantas-->
-                  <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/pintura_pavo_real_recortado.jpg" alt="Pa'o Real"  width="100"><h2>Entero Pa'o, the real</h2></a>
-                  <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/origen-del-arte-abstracto-e1635552766306_recortado.jpg"width="100" alt="Pa'o Real"  ><h2>Arte No Reconocida</h2></a>
+              </div> 
+                <div class="col-lg-4 mb-4"> 
+                  <div class="d-grid gap-2">  
+                                                <!--elementos que ayudarán a las plantas-->
+                    <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/pintura_pavo_real_recortado.jpg" alt="Pa'o Real"  width="100"><h2>Entero Pa'o, the real</h2></a>
+                    <a class="btn btn-light" href="#" role="button"><img class="w-100 mb-4 rounded" src="imagenes de la Galeria/origen-del-arte-abstracto-e1635552766306_recortado.jpg"width="100" alt="Pa'o Real"  ><h2>Arte No Reconocida</h2></a>
                 </div>
+              </div> 
             </div>
-          </div>
+          
            <!------------------------------------------------------------------------------------foooter---------------------------------------------------------------------------------->
            <!---Footer con las redes sociales y otras cosas-->
           <div class="container-fluid">
@@ -160,7 +183,7 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" >
                       <h6 class="text-uppercase mb-4 font-weight-bold"></h6>
                       <p>
-                        <a class="text-white"></a>
+                        <a class="text-white">Nuestra Mision es empezar a Vender nuestra arte</a>
                       </p>
                       <p>
                         <a class="text-white"></a>
@@ -194,7 +217,7 @@
                       <h6 class="text-uppercase mb-4 font-weight-bold">Siguenos</h6>
 
                       <!-- Facebook -->
-                      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i> Facebook</a>
+                      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://web.facebook.com/alan.zamora.1000" role="button"><i class="fab fa-facebook-f"></i> Facebook</a>
 
                       <!-- Twitter -->
                       <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i>Twitter</a>
