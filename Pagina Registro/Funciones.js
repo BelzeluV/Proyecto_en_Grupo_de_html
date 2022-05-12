@@ -4,7 +4,6 @@ function validarcamposvacios()
     let real = document.getElementById("nombre_real").value;
     let rut = document.getElementById('rut').value;
     let dv = document.getElementById('dv').value;
-    let correo = document.getElementById('Correo').value;
     let correo = document.getElementById('email_contacto').value;
     let contraseña = document.getElementById('contraseña').value;
     let contraseña2 = document.getElementById('contraseñarepite').value;
@@ -14,7 +13,6 @@ function validarcamposvacios()
     let direccion = document.getElementById('direccion').value;
     let comuna = document.getElementById('comuna').value;
 
-    if( nombreusuario =="" || real =="" ||rut =="" ||dv=="" ||correo ==""||contraseña == "" || contraseña2 == ""| fechanacimiento== "" || sexo == ""| telefono == "" || direccion == "" || comuna =="")
     if(nombreusuario==""||real==""||rut==""||dv==""||correo ==""||contraseña==""||contraseña2 ==""||fechanacimiento==""||sexo==""|telefono==""||direccion==""||comuna=="")
     {
         alert("tiene campos sin llenar en el formulario");
