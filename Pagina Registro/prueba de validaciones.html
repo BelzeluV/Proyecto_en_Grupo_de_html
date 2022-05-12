@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="icon" href="Resources/Plantita Inicio.jpg">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crear cuenta | Plantitas </title>
+        <script src="Funciones.js"></script><!--aqui pongamos el script de las validaciones-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>                
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <form>
+            <label >nombre usuario:</label><input type="text" id="nombreusuario" name="txtusuario" class="txtusuario form-control" maxlength="50" placeholder="Por ejemplo: el_queso_Bakan" title="Ingrese Su nombre de usuario" required>
+            <br>
+            <label >nombre real:   </label><input type="text" id="nombre" name="txtNombre" class="txtNombre form-control" maxlength="100" placeholder="Ej: Juan Pérez" title="Ingrese su nombre Real" pattern="[a-zA-Z]*" required >
+            <br>
+            <label >rut: </label><input type="text" id="rut" name="RUT" class="txtrut form-control" maxlength="8" placeholder="Ej: 12345678" title="Ingrese su rut"  pattern="[0-9]+" required>   
+            <label id="lbl_dv">dv: </label><input type="text" id="dv" name="DV" class="txtdv form-control" maxlength="1" placeholder="k" title="Digito Verificador"  pattern="[kK0-9]+" required>
+            <br>
+            <label id="lbl_correo">correo</label><input type="email" name="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="txt_correo form-control"> 
+            <!-- <input type="email" class="txt_correo form-control" name="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)[.][a-zA-Z]{1,5}"placeholder="Ej: Juan.Perez@CorreoDeEjemplo.cl" title="Ingrese su Correo" required> -->
+            <br>
+            <label id="lbl_contraseña">contraseña</label><input type="password" id="contraseña" name="txt_pass" class="txt_pass form-control" maxlength="50" placeholder="Su Contraseña puede tener hasta 50 Caracteres" title="Contraseña" required pattern="[A-Za-z0-9]{5,40}">
+            <br>
+            <label id="lbl_Contraseña2">contraseña2</label><input type="password" id="contraseñarepite" name="txt_pass2" class="txt_pass2 form-control" maxlength="50" placeholder="Recuerde que su Contraseña puede tener hasta 50 Caracteres" title="Contraseña repita por favor" required>
+            <br>
+            <label id="lbl_nacimiento">nacimiento</label><input type="date" id="nacimiento" name="txtNacimiento" class="txtNacimiento form-control" title="Ingrese la fecha de nacimiento" required>
+            <br>
+            <label id="genero">genero</label><select name="cmbSexo" id="sexo" class="cmbSexo form-control" required>          <!--id sexo listo-->
+            <option value="0">Seleccionar...</option>
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+            <option value="3">Helicoptero De Combate</option>
+            <option value="4">No especificado</option>
+            </select>
+            <br>
+            <label id="lbl_telefono">telefono (+56)</label><input type="text" id="telefono" placeholder="Ingrese su numero de telefono" 
+class="txttelefono form-control" maxlength="9" required pattern="[0-9]+">
+            <br>
+            <label id="lbl_direccion">direccion</label><input type="text" id="direccion" placeholder="ingrese su Direccion" class="txtdireccion form-control" required>
+            <br>
+            <label id="lbl_comuna">comuna</label><select id="comuna" class="form-select">                           
+                <option value="0">Seleccione comuna</option>
+                <option value="Cerrillos">Cerrillos</option>
+                <option value="Cerro Navia">Cerro Navia</option>
+                <option value="Conchalí">Conchalí</option>
+                <option value="El Bosque">El Bosque</option>
+                <option value="Estación Central">Estación Central</option>
+                <option value="Huechuraba">Huechuraba</option>
+                <option value="Independencia">Independencia</option>
+                <option value="La Cisterna">La Cisterna</option>
+                <option value="La Florida">La Florida</option>
+                <option value="La Granja">La Granja</option>
+                <option value="La Pintana">La Pintana</option>
+                <option value="La Reina">La Reina</option>
+                <option value="Las Condes">Las Condes</option>
+                <option value="Lo Barnechea">Lo Barnechea</option>
+                <option value="Lo Espejo">Lo Espejo</option>
+                <option value="Lo Prado">Lo Prado</option>
+                <option value="Macul">Macul</option>
+                <option value="Maipú">Maipú</option>
+                <option value="Ñuñoa">Ñuñoa</option>
+                <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                <option value="Peñalolén">Peñalolén</option>
+                <option value="Providencia">Providencia</option>
+                <option value="Pudahuel">Pudahuel</option>
+                <option value="Quilicura">Quilicura</option>
+                <option value="Quinta Normal">Quinta Normal</option>
+                <option value="Recoleta">Recoleta</option>
+                <option value="Renca">Renca</option>
+                <option value="San Joaquín">San Joaquín</option>
+                <option value="San Miguel">San Miguel</option>
+                <option value="San Ramón">San Ramón</option>
+                <option value="Vitacura">Vitacura</option>
+                <option value="Puente Alto">Puente Alto</option>
+                <option value="Pirque">Pirque</option>
+                <option value="San José de Maipo">San José de Maipo</option>
+                <option value="Colina">Colina</option>
+                <option value="Lampa">Lampa</option>
+                <option value="TilVl">Tiltil</option>
+                <option value="San Bernardo">San Bernardo</option>
+                <option value="Buin">Buin</option>
+                <option value="Calera de Tango">Calera de Tango</option>
+                <option value="Paine">Paine</option>
+                <option value="Melipilla">Melipilla</option>
+                <option value="Alhué">Alhué</option>
+                <option value="Curacaví">Curacaví</option>
+                <option value="María Pinto">María Pinto</option>
+                <option value="San Pedro">San Pedro</option>
+                <option value="Talagante">Talagante</option>
+                <option value="El Monte">El Monte</option>
+                <option value="Isla de Maipo">Isla de Maipo</option>
+                <option value="Padre Hurtado">Padre Hurtado</option>
+                <option value="Peñaflor">Peñaflor</option>
+            </select>
+            <br>
+            <input type="submit" name="btnLimpiar" class="btnLimpiar btn btn-danger float-end"title="Limpia el formulario con la información escrita" value="Limpiar" onclick="validarRut();validarcontraseña();validaredad">
+            <button type="button" class="btn btn-success float-end" onclick="">Enviar</button>
+        </form>
+
+    </body>    
+
+</html>

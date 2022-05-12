@@ -11,15 +11,14 @@
         <link rel="icon" href="Resources/Plantita Inicio.jpg">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <div style="background-image:url(fondo_pagina_2.jpg);"></div>
         <title>Crear cuenta | Plantitas </title>
-        <link rel="stylesheet" href="Style.css">
+        <script src="Funciones.js"></script><!--aqui pongamos el script de las validaciones-->
+        <div style="background-image:url(fondo_pagina_2.jpg);"></div>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>                
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="Funciones.js"></script><!--aqui pongamos el script de las validaciones-->
     </head>
     
     <body>
@@ -118,10 +117,9 @@
                     <h3 style="color: aliceblue;">Correo</h3>        
                 </div>
                 <div class="col-md-6">                                                      <!-- id correo listo-->
-                    <input type="text" id="Correo" name="txt_correo" 
-                    class="txt_correo form-control" 
-                    maxlength="200" placeholder="Ej: Juan.Perez@CorreoDeEjemplo.cl" 
-                    title="Ingrese su Correo">
+                    <input type="email" class="txt_correo form-control" name="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)[.][a-zA-Z]{1,5}"placeholder="Ej: Juan.Perez@CorreoDeEjemplo.cl" 
+                    title="Ingrese su Correo"
+                    required>
                 </div>
             </div>
             <div class="row mb-2">                                                          <!--contraseña-->
@@ -140,7 +138,7 @@
                     <h3 style="color: aliceblue;">Repita La Contraseña</h3>         
                 </div>
                 <div class="col-md-6">                                                      <!--id contraseña repetida lista-->
-                    <input type="password2" id="contraseñarepite" name="txt_pass2" 
+                    <input type="password" id="contraseñarepite" name="txt_pass2" 
                     class="txt_pass2 form-control" 
                     maxlength="50" placeholder="Recuerde que su Contraseña puede tener hasta 50 Caracteres" 
                     title="Contraseña">
@@ -175,16 +173,16 @@
             
             <div class="row mb-5 mt-5">
                 <div class="text-center">
-                    <h1 style="color: aliceblue;margin-bottom: 0px;" ;="">Contacto con usted</h1>
+                    <h1 style="color: aliceblue;">Contacto con usted</h1>
                 </div>        
             </div>
             <div class="row mb-2">                                                      <!--telefonos-->
                 <div class="col-12 col-md-2 offset-md-2">
-                    <h3 style="color: aliceblue;">Teléfono</h3>        
+                    <h3 style="color: aliceblue;">Teléfono: (+56)</h3>        
                 </div>
                 <div class="col-sm-12 col-md-6">                                        <!--id telefono listo-->
                     <input type="text" id="telefono" placeholder="Ingrese su numero de telefono" 
-                    class="txttelefono form-control" required pattern="[0-9] (8)">
+                    class="txttelefono form-control" maxlength="9" required pattern="[0-9] (8)">
                 </div>
             </div>
             <br>
@@ -205,7 +203,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <select id="comuna" class="form-select">                           
-                        <option value="sin-comuna">Seleccione comuna</option>
+                        <option value="0">Seleccione comuna</option>
                         <option value="Cerrillos">Cerrillos</option>
                         <option value="Cerro Navia">Cerro Navia</option>
                         <option value="Conchalí">Conchalí</option>
@@ -268,10 +266,10 @@
                     <input type="submit" name="btnLimpiar" 
                     class="btnLimpiar btn btn-danger float-end"
                     title="Limpia el formulario con la información escrita" value="Limpiar">
-                    <button type="button" class="btn btn-success float-end" onclick="">Enviar</button>
+                    <button type="button" class="btn btn-success float-end" onclick="validarcamposvacios()">Enviar</button>
                 </div>
+                <label id="lblmensaje"></label>
             </div>
-            <label for=""></label>
           </div>
 
     <!-----------------------------------------------------------------------footer----------------------------------->
