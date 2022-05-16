@@ -94,7 +94,7 @@
                         <input type="text" id="nombre" 
                         name="txtNombre" class="txtNombre form-control" 
                         maxlength="100" placeholder="Ej: Juan Pérez" 
-                        title="Ingrese su nombre Real" pattern="[a-zA-Z]*" 
+                        title="Ingrese su nombre Real" pattern="[a-zA-Z ]*" 
                         required>
                     </div>
                 </div>
@@ -194,6 +194,7 @@
                         placeholder="Ingrese su numero de telefono" 
                         class="txttelefono form-control" maxlength="9" 
                         required pattern="[0-9]+" 
+                        oninput="validarnumero(this)"
                         title="solo ingresar numeros por favor">
                     </div>
                 </div>

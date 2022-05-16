@@ -1,4 +1,4 @@
-function checkRut(rut) { //v2
+function checkRut(rut){                    //v2 mejorada y re hecha
     var valor = rut.value.replace('.','');
     valor = valor.replace('-','');
     
@@ -34,7 +34,7 @@ function checkRut(rut) { //v2
     rut.setCustomValidity('');
 }
 
-function checkigualdad(){
+function checkigualdad(){                   //creada hace unas horas por mi
     let contrasena = document.getElementById('contrasena').value;
     let contrasenarepite = document.getElementById('contrasenarepite').value;
     
@@ -44,7 +44,7 @@ function checkigualdad(){
     }
 }
 
-function checkcontrasena(contrasena){
+function checkcontrasena(contrasena){       //lista la cosa
     if (contrasena.length < 8){
         contrasena.setCustomValidity("la contraseña debe tener mas de 8 caracteres");
     }
@@ -59,16 +59,11 @@ function checkcontrasena(contrasena){
     }
 }
 
-function validaedad (fecha_naci) {
-    if(!fecha_naci){
-        alert('ingrese fecha');
-        return false;
-    }
+function validaedad (fecha_naci) {          //no encontre mucho mejor las cosas
     var valores = fecha_naci.split ("-");
     var mes_naci = valores [1];
     var anio_naci = valores [0];
     var fecha_act = new Date();
-    
     var mes_act = fecha_act.getMonth() + 1;
     var anio_act = fecha_act.getFullYear();
     
@@ -79,13 +74,22 @@ function validaedad (fecha_naci) {
         alert('es menor de edad, no puede ingresarse');
         return false;
     }
-    return true;
+    else
+    {
+        return true;
+    }
+    
 }
-function validarnumero(numero){
+
+function validarnumero(numero){                   // este debe funcionar sin problemas.
+    
     if (numero <8)
     {
-        numero.setCustomValidity("el numero no es valido, deben ser 8 digitos.")
+        alert("el numero no es valido, deben ser 8 digitos.");
         return false;
+    }
+    else{
+        return true
     }
 }
 
