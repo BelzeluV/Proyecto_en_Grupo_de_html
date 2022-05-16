@@ -1,113 +1,3 @@
-function validarRut() //V1
-{
-    let rut = document.getElementById('rut').value;
-    let tamañorut = rut.length;
-    let dv = document.getElementById('dv').value;
-    var suma = 0;
-    var multiplicador = 3;
-    var i = 1
-    var resto = suma %11;
-    var res_aux = "a";
-    var res_aux2 = "a";
-    
-    if(rut.length < 7){ 
-        alert("el rut está incompleto");
-        return;
-    }
-
-    if (rut == 7 ){s
-        multiplicador = 2;
-    }
-
-    while (i < tamañorut){
-    
-        suma = suma + (rut.substr(i,1) * multiplicador);
-
-        multiplicador = multiplicador -1
-        if (multiplicador = 1){
-            multiplicador = 7;
-        }
-        i++;
-    }
-    var resto = suma %11;
-    var resultado = 11-resto;
-
-
-    if (resultado == 11){
-        resultado = 0;
-    }
-    else if (resultado ==10){
-        res_aux = "k";
-        res_aux2 = "K";
-    }
-
-    if (resultado == dv){
-        let mensaje = "Rut Valido.";
-        document.getElementById("lblmensaje").innerHTML = mensaje;
-    }
-    else if(resultado == 10 && dv == k)
-    {
-        let mensaje = "Rut Valido.";
-        document.getElementById("lblmensaje").innerHTML = mensaje;
-    }
-    else{
-        let mensaje = "Rut invalido.";
-        document.getElementById("lblmensaje").innerHTML = mensaje;
-        return;
-    }
-}
-
-
-
-
-
-function validarcontraseña(){
-    let contraseña = document.getElementById('contraseña').value;
-    let contraseña2 = document.getElementById('contraseñarepite').value;
-    var espacio = false;
-    var cont = 0;
-
-    while (!espacio && (cont < contraseña.length)) {
-    if (contraseña.charAt(cont) == " ")
-    {
-        espacio = true;
-        let mensaje = "la contraseña no puede tener espacios, intente nuevamente.";
-        document.getElementById("lblmensajecontraseña").innerHTML = mensaje;
-        return;
-    }
-    cont++;
-    }
-    
-    if (espacio) {
-    alert ("La contraseña no puede contener espacios en blanco");
-    return false;
-    }
-
-    if (contraseña.length == 0 || contraseña2.length == 0) {
-        alert("Los campos de la password no pueden quedar vacios");
-        return;
-    }
-    if (p1 != p2){
-        let mensaje = "las contraseñas coinciden";
-        document.getElementById("lblmensajecontraseña").innerHTML = mensaje;
-        return;
-    }
-    
-}
-
-function validaredad() {
-    let fechanacimiento = document.getElementById('nacimiento').value;
-    var hoy = new Date();
-    var edad = hoy.getFullYear() - fechanacimiento.getFullYear();
-    var m = hoy.getMonth() - fechanacimiento.getMonth();
-    if (m < 0 || (m === 0 && hoy.getDate() < fechanacimiento.getDate())) {
-        edad--;
-    }
-    if(edad < 18){
-        alert("Eres menor de edad, no puedes comprar aqui ningún articulo.");
-    }
-}
-
 function checkRut(rut) { //v2
     var valor = rut.value.replace('.','');
     valor = valor.replace('-','');
@@ -117,7 +7,11 @@ function checkRut(rut) { //v2
     
     rut.value = cuerpo + '-'+ dv
     
-    if(cuerpo.length < 7) { rut.setCustomValidity("RUT Incompleto"); return false;}
+    if(cuerpo.length < 7) 
+    { 
+        rut.setCustomValidity("RUT Incompleto"); 
+        return false;
+    }
     
     suma = 0;
     multiplo = 2;
@@ -128,13 +22,70 @@ function checkRut(rut) { //v2
         if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
   
     }
-    
-
     dvEsperado = 11 - (suma % 11);
     
     dv = (dv == 'K')?10:dv;
     dv = (dv == 0)?11:dv;
     
-    if(dvEsperado != dv) { rut.setCustomValidity("RUT Inválido"); return false; }
+    if(dvEsperado != dv)
+    { rut.setCustomValidity("RUT Inválido"); 
+    return false; 
+    }
     rut.setCustomValidity('');
 }
+
+function checkigualdad(){
+    let contrasena = document.getElementById('contrasena').value;
+    let contrasenarepite = document.getElementById('contrasenarepite').value;
+    
+    if (contrasenarepite != contrasena){
+        alert("las contraseñas no coinciden.");
+        return false;
+    }
+}
+
+function checkcontrasena(contrasena){
+    if (contrasena.length < 8){
+        contrasena.setCustomValidity("la contraseña debe tener mas de 8 caracteres");
+    }
+    while (!espacio && (cont < contraseña.length)) {
+        if (contrasena.charAt(cont) == " ")
+        {
+            espacio = true;
+            contrasena.setCustomValidity("la contraseña no puede tener espacios.");
+            return false;
+        }
+        cont++;
+    }
+}
+
+function validaedad (fecha_naci) {
+    if(!fecha_naci){
+        alert('ingrese fecha');
+        return false;
+    }
+    var valores = fecha_naci.split ("-");
+    var mes_naci = valores [1];
+    var anio_naci = valores [0];
+    var fecha_act = new Date();
+    
+    var mes_act = fecha_act.getMonth() + 1;
+    var anio_act = fecha_act.getFullYear();
+    
+    var resta = (anio_act - anio_naci) * 12 - (mes_act - mes_naci);
+    
+    if (resta < (18*12)) 
+    {
+        alert('es menor de edad, no puede ingresarse');
+        return false;
+    }
+    return true;
+}
+function validarnumero(numero){
+    if (numero <8)
+    {
+        numero.setCustomValidity("el numero no es valido, deben ser 8 digitos.")
+        return false;
+    }
+}
+
